@@ -1,0 +1,9 @@
+<!--component/menu-list-item/index.wxml-->
+<wxs module="format" src="../../utils/format.wxs"></wxs>
+<view class="menu-item" bindtap="menuItemClick">
+  <view class="menu-cover">
+    <image class="menu-img" src="{{item.coverImgUrl}}" />
+    <view class="menu-playcount">{{format.formatCounter(item.playCount)}}</view>
+  </view>
+  <view class="menu-name">{{item.name}}</view>
+</view>

@@ -1,0 +1,17 @@
+<!--base-ui/nav-bar/index.wxml-->
+<view class="nav">
+  <view class="placeholder" style="height: {{statusBarHeight}}px"></view>
+  <view class="nav-bar" style="height: {{navBarHeight}}px">
+    <view class="left"  bind:tap="backHome">
+      <view class="left-slot"><slot name="left"></slot></view>
+      <view class="left-icon">
+        <image class="icon" src="../../assets/images/icons/arrow-left.png" mode="widthFix"></image>
+      </view>
+    </view>
+    <view class="center">
+      <view class="center-slot"><slot name="title"></slot></view>
+      <view class="center-title"><view class="title">{{title}}</view></view>
+    </view>
+    <view class="right"></view>
+  </view>
+</view>

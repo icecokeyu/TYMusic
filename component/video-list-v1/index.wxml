@@ -1,0 +1,16 @@
+<!--component/video-list-v1/index.wxml-->
+<wxs module="format" src="../../utils/format.wxs"></wxs>
+<view class="item">
+  <view class="album">
+    <image class="album-cover" src="{{item.cover}}" mode="widthFix"></image>
+    <view class="count">
+      {{format.formatCounter(item.playCount)}}
+    </view>
+    <view class="play-duration">
+      {{format.formatDuration(item.mv.videos[0].duration)}}
+    </view>
+  </view>
+  <view class="info">
+      {{item.name}}-{{item.artistName}}
+  </view>
+</view>

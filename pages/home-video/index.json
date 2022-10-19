@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "video-list-v1": "/component/video-list-v1/index"
+  },
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
+}

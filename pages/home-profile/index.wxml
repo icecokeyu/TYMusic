@@ -1,0 +1,8 @@
+<!--pages/home-profile/index.wxml-->
+<button open-type="getUserInfo" bindtap="handleGetUser" class="btn">获取用户信息</button>
+<view class="user-info">
+  <image class="img" src="{{userInfo.avatarUrl}}" />
+  <view class="nike-name">
+    {{userInfo.nickName}}
+  </view>
+</view>

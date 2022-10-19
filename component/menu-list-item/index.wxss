@@ -1,0 +1,45 @@
+/* component/menu-list-item/index.wxss */
+.menu-item {
+  display: inline-block;
+  margin-left: 20rpx;
+  width: 220rpx;
+  vertical-align: top;
+}
+
+.menu-cover {
+  position: relative;
+}
+
+.menu-img {
+  height: 220rpx;
+  width: 220rpx;
+  border-radius: 10rpx;
+}
+
+.menu-playcount {
+  position: absolute;
+  width: 80rpx;
+  height: 30rpx;
+  right: 6rpx;
+  bottom: 10rpx;
+  color: #ffffff;
+  font-size: 20rpx;
+  border-radius: 10rpx;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.menu-name {
+  width: 100%;
+  font-size: 26rpx;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -moz-box;
+  -moz-line-clamp: 2;
+  -moz-box-orient: vertical;
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: normal;
+  overflow: hidden;
+}

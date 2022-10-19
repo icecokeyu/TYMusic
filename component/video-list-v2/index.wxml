@@ -1,0 +1,16 @@
+<!--component/video-list-v2/index.wxml-->
+<wxs module="format" src="../../utils/format.wxs"></wxs>
+<view class="recommend-item" wx:for="{{relatedVideo}}" wx:key="durationms">
+  <view class="video-cover">
+    <image src="{{item.coverUrl}}" class="img-cover" mode="widthFix"/>
+    <view class="playcount">{{format.formatCounter(item.durationms)}}</view>
+  </view>
+  <view class="video-info">
+    <view class="video-title">
+      {{item.title}}
+    </view>
+    <view class="video-artist">
+      {{item.creator[0].userName}}
+    </view>
+  </view>
+</view>

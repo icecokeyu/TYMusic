@@ -1,0 +1,14 @@
+<!--pages/home-music/childComps/peak-list-item/index.wxml-->
+<wxs module="format" src="../../../../utils/format.wxs"></wxs>
+<view class="peak-list-item">
+  <view class="item-left">
+    <view class="name">{{item.name}}</view>
+    <view class="item-song">1.{{item.songList[0].name}}-{{item.songList[0].ar[0].name}}</view>
+    <view class="item-song">2.{{item.songList[1].name}}-{{item.songList[1].ar[0].name}}</view>
+    <view class="item-song">3.{{item.songList[2].name}}-{{item.songList[2].ar[0].name}}</view>
+  </view>
+  <view class="item-right">
+    <image class="img" src="{{item.coverImgUrl}}"></image>
+    <view class="item-playCount">{{format.formatCounter(item.playCount)}}</view>
+  </view>
+</view>

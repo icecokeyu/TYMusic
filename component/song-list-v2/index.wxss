@@ -1,0 +1,30 @@
+/* component/song-list-v2/index.wxss */
+.song-item {
+  display: flex;
+  align-items: center;
+  margin: 36rpx 0;
+  margin-left: 20rpx;
+}
+
+.index {
+  width: 30rpx;
+  margin-right: 30rpx;
+}
+
+.info {
+  flex: 1
+}
+
+.name {
+  margin-bottom: 6rpx;
+}
+
+.img {
+  width: 40rpx;
+  margin-right: 8rpx;
+}
+
+.txt {
+  font-size: 26rpx;
+  color: #666666;
+}

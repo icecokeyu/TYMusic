@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "area-header": "/component/area-header/index",
+    "menu-list-item": "/component/menu-list-item/index"
+  }
+}

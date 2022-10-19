@@ -1,0 +1,28 @@
+<!--pages/songs-list/index.wxml-->
+<area-header title="华语歌单" showRight="{{false}}"></area-header>
+<view class="menu">
+  <view class="item" wx:for="{{chineseMenus}}" wx:key="id">
+    <menu-list-item item="{{item}}"></menu-list-item>
+  </view>
+</view>
+
+<area-header title="欧美歌单" showRight="{{false}}"></area-header>
+<view class="menu">
+  <view class="item" wx:for="{{englishMenus}}" wx:key="id">
+    <menu-list-item item="{{item}}"></menu-list-item>
+  </view>
+</view>
+
+<area-header title="古风歌单" showRight="{{false}}"></area-header>
+<view class="menu">
+  <view class="item" wx:for="{{antiquityMenus}}" wx:key="id">
+    <menu-list-item item="{{item}}"></menu-list-item>
+  </view>
+</view>
+
+<area-header title="流行歌单" showRight="{{false}}"></area-header>
+<view class="menu">
+  <view class="item" wx:for="{{popMenus}}" wx:key="id">
+    <menu-list-item item="{{item}}"></menu-list-item>
+  </view>
+</view>

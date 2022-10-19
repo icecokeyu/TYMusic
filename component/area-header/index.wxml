@@ -1,0 +1,16 @@
+<!--component/area-header/index.wxml-->
+<view class="recommend-header">
+  <view class="title">
+    {{title}}
+  </view>
+  <view class="right" wx:if="{{showRight}}" bindtap="clickMore">
+    <view class="slot">
+      <slot></slot>
+    </view>
+    <view class="default">
+      <view class="right-text">{{rightText}}</view>
+      <image src="../../assets/images/icons/arrow-right.png" class="ico"></image>
+    </view>
+  </view>
+</view>
+  

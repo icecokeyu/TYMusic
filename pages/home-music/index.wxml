@@ -1,0 +1,85 @@
+<!--pages/home-music/index.wxml-->
+<view class="home-music">
+  <van-search
+    shape="round"
+    background="#fafafa"
+    placeholder="请输入搜索关键词"
+    disabled
+    bindtap="searchClick"
+  />
+  <!-- 轮播图 -->
+  <swiper autoplay class="swiper" indicator-dots style="height: {{imageHeight}}px">
+    <block wx:for="{{banners}}" wx:key="targetId">
+      <swiper-item class="swiper-item">
+        <image class="swiper-image" src="{{item.pic}}" mode="widthFix" bindload="handleImageLoad">
+        </image>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!-- 推荐歌曲 -->
+  <view class="recommend">
+    <area-header title="推荐歌曲" bind:clickRight="clickMore"></area-header>
+    <view class="song-list">
+      <block wx:for="{{recommendSongs}}" wx:key="id">
+        <song-list-v1 item="{{item}}" bind:tap="handleSongItemClick" data-index="{{index}}"></song-list-v1>
+      </block>
+    </view>
+  </view>
+
+  <!-- 热门歌单 -->
+  <view class="hot-menu">
+    <area-header title="热门歌单" bind:clickRight="clickSongsListMore"></area-header>
+    <view class="menu-list">
+      <scroll-view 	scroll-x class="menu-scroll">
+        <block wx:for="{{hotSongMenu}}" wx:key="id">
+          <menu-list-item item="{{item}}"></menu-list-item>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+
+  <!-- 推荐歌单 -->
+  <view class="recommend-menu">
+    <area-header title="推荐歌单" bind:clickRight="clickSongsListMore"></area-header>
+    <view class="menu-list">
+      <scroll-view 	scroll-x class="menu-scroll">
+        <block wx:for="{{recommendSongsMenu}}" wx:key="id">
+          <menu-list-item item="{{item}}"></menu-list-item>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+
+  <!-- 巅峰榜 -->
+  <view class="peak-list"  style="padding-bottom: {{ isShow  ? ' 50px' : '0px' }}">
+    <area-header title="巅峰榜" showRight="{{false}}"></area-header>
+    <block wx:for="{{rankings}}" wx:key="index">
+      <peak-list-item item="{{item}}" bind:tap="clickPeakItem" data-id="{{index}}"></peak-list-item>
+    </block>
+  </view>
+
+  <!-- 音乐播放状态条 -->
+  <view class="music-bar" wx:if="{{isShow}}" bind:tap="handleMusicBarClick">
+    <view class="music-left">
+      <image 
+      src="{{songInfo.al.picUrl}}" 
+      mode="aspectFill" 
+      class="cover-img album-anim"
+      style="animation-play-state: {{playAnimState}}"
+      />
+      <view class="song-name">{{songInfo.name}}</view>
+    </view>
+    <view class="music-right">
+      <image src="../../assets/images/player/play_{{isPlayingName}}.png" class="icon" catch:tap="handleIconClick"/>
+      <image src="../../assets/images/player/play_music.png" class="play" catch:tap="showPopup"/>
+    </view>
+  </view>
+
+  <van-popup show="{{ popupShow }}" bind:close="onClose" position="right" closeable close-icon-position="top-right" custom-style="height: 100%; width: 60%">
+    <area-header title="播放列表" showRight="{{false}}"></area-header>
+    <song-list-v2 songInfo="{{playListSongs}}"></song-list-v2>
+  </van-popup>
+</view>
+  
+

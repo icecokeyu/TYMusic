@@ -1,0 +1,95 @@
+/* pages/home-music/index.wxss */
+
+page {
+  background-color: #fafafa;
+  padding: 0 12rpx;
+}
+
+.van-search {
+  padding: 10px 0!important;
+}
+
+.van-search__content {
+  background-color: #ffffff!important;
+}
+
+/* 轮播图 */
+.swiper {
+  border-radius: 10rpx;
+  overflow: hidden;
+  transform: translateY(0);
+}
+
+.swiper-image {
+  width: 100%;
+}
+
+.menu-scroll {
+  width: 100vw;
+  white-space: nowrap;
+  position: relative;
+  left: -20rpx;
+}
+
+/* 音乐播放状态条 */
+.music-bar {
+  display: flex;
+  position: fixed;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  height: 44px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 8px;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+  background: #fafafa;
+}
+
+.music-left {
+  display: flex;
+  align-items: center;
+}
+
+.cover-img {
+  position: relative;
+  bottom: 4px;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.music-right {
+  display: flex;
+  align-items: center;
+}
+
+.music-right .play {
+  width: 25px;
+  height: 25px;
+  background-color: #26ce8a;
+}
+
+.music-right .icon {
+  width: 25px;
+  height: 25px;
+  margin-right: 10rpx;
+  background-color: #26ce8a;
+}
+
+.album-anim {
+  animation: imgRotate 16s linear infinite;
+}
+
+@keyframes imgRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+

@@ -1,0 +1,17 @@
+/* pages/home-video/index.wxss */
+
+.video {
+  display: flex;
+  margin-top: 20rpx;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.video-item {
+  width: 46%;
+  margin-bottom: 30rpx;
+}
+
+
+
+

@@ -1,0 +1,33 @@
+/* component/song-list-v1/index.wxss */
+.song-item {
+  display: flex;
+  align-items: center;
+  padding: 16rpx 0;
+}
+
+.song-img {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 10rpx;
+}
+
+.song-info {
+  margin-left: 16rpx;
+  flex: 1!important;
+}
+
+.song-info  .song-title {
+  font-size: 32rpx;
+  color: #555;
+}
+
+.song-info  .song-al {
+  margin-top: 16rpx;
+  font-size: 24rpx;
+  color: #999;
+}
+
+.arrow .icon {
+  width: 50rpx;
+  height: 50rpx;
+}

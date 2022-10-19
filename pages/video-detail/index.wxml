@@ -1,0 +1,19 @@
+<!--pages/video-detail/index.wxml-->
+<wxs module="format" src="../../utils/format.wxs"></wxs>
+<view class="video-detail">
+  <video src="{{urlData.url}}" class="video" loop autoplay controls></video>
+  <view class="detail-info">
+    <view class="title">{{videoInfo.name}}</view>
+    <view class="art">{{videoInfo.artistName}}-</view>
+    <view class="player-count">{{format.formatCounter(videoInfo.playCount)}}次播放-{{videoInfo.publishTime}}</view>
+  </view>
+  <view class="recommend">
+    <view class="recommend-title">
+      推荐视频
+    </view>
+    <view class="recommend-list">
+      <video-list-v2 relatedVideo="{{relatedVideo}}"></video-list-v2>
+    </view>
+  </view>
+</view>
+  

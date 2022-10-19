@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-search": "@vant/weapp/search/index",
+    "area-header": "/component/area-header/index",
+    "song-list-v2": "/component/song-list-v2/index"
+  },
+  "navigationBarBackgroundColor": "#f7f7f7"
+}
